@@ -1,0 +1,15 @@
+<div [ngClass]="{'light-mode': !darkMode, 'dark-mode': darkMode}">
+    <header>
+        <div class="container header">
+            <h1 class="header__title">Where in the world?</h1>
+            <ul class="header__theme">
+              <li class="header__items" (click)="darkMode = !darkMode">
+                <i class="fa-regular fa-moon"></i>Dark Mode
+              </li>
+            </ul>
+        </div>
+    </header>
+    <main class="body">
+      <router-outlet></router-outlet>
+    </main>    
+</div>

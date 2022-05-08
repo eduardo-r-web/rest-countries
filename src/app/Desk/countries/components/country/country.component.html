@@ -1,0 +1,11 @@
+<article *ngIf="country" [routerLink]="['country', country.name]">
+    <img [src]="country.flag" [alt]="country.name" loading="lazy">
+    <div class="country-info">
+        <h2>{{country.name}}</h2>
+        <ul>
+            <li><strong>Population: </strong><p>{{country.population}}</p></li>
+            <li><strong>Region: </strong><p>{{country.region}}</p></li>
+            <li><strong>Capital: </strong><p>{{country.capital}}</p></li>
+        </ul>
+    </div>
+</article>

@@ -1,0 +1,10 @@
+<div class="filter">
+    <div class="filter__search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search for a country" #search (keyup)="emitFilter(search.value)">
+    </div>
+    <select class="filter__select" [formControl]="continent" (change)="emitFilter()">
+        <option disabled selected hidden value="">Selecciona</option>
+        <option *ngFor="let continent of continents" [value]="continent">{{continent}}</option>
+    </select>
+</div>

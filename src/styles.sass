@@ -1,1 +1,215 @@
+@import './assets/scss/variables.scss'
 
+html, body
+    margin: 0
+    padding: 0
+    font-family: 'Nunito Sans', sans-serif
+
+ul
+    list-style: none
+    padding: 0
+
+img
+    max-width: 100%
+    display: block
+
+.container
+    max-width: $width-desktop
+    width: 90%
+    margin: 0 auto
+
+header
+    height: 60px
+
+.header
+    display: flex
+    justify-content: space-between
+    align-content: center
+    &__title
+        font-size: 22px
+        font-weight: $weightsBold
+    &__theme
+        list-style: none
+        padding: 0
+        cursor: pointer
+    &__items
+        font-size: $homepageItems
+        font-weight: $weightsBold
+        svg
+            margin-right: 5px
+            transform: rotate(-24deg)
+
+.filter
+    height: 70px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__search
+        padding: 10px 25px
+        input
+            border: none
+            border-radius: $radius
+            margin-left: 20px
+    &__select
+        padding: 11px
+        width: 130px
+        border: none
+        border-radius: $radius
+  
+article
+    max-width: 240px
+    border-radius: $radius
+    margin-bottom: 50px
+    cursor: pointer
+    height: 350px
+    img
+        border-top-left-radius: $radius
+        border-top-right-radius: $radius
+        height: 150px   
+    .country-info
+        width: 90%
+        margin: 0 auto
+        padding-bottom: 10px
+        ul li
+            display: flex
+            align-items: center
+            p
+                margin-left: 5px
+                margin-bottom: 0
+                margin-top: 0
+
+.country-detail
+    padding-top: 50px
+    height: 650px
+    &__btn
+        border: none
+        box-shadow: $shadow-elements
+        background-color: $lightElements
+        color: $bodytext
+        padding: 10px 30px
+        margin-bottom: 60px
+        svg
+            margin-right: 10px
+    &__info
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .img-container
+            width: 40%
+        .card-info
+            width: 60%
+            padding: 0 10%
+
+.texts
+    width: 100%
+    display: flex
+    justify-content: space-between
+    .textsOne
+        list-style: none
+        padding: 0
+        width: 49%
+    .textsTwo
+        width: 49%
+        div
+            display: flex
+            align-items: center
+            ul
+                display: flex
+                li
+                    margin: 0 5px
+
+.borders
+    display: flex
+    align-items: center
+    div
+        ul
+            display: flex
+            flex-wrap: wrap
+            li
+                margin: 0 10px
+                box-shadow: $shadow-elements
+                border-radius: $radius
+                padding: 3px 20px
+
+
+.light-mode
+    .bg
+        background-color: $bodycolor
+    header
+        background-color: $lightElements
+    .header
+        &__title, &__items
+            color: $bodytext
+    .body
+        background-color: $bodycolor
+    .filter
+        &__search
+            box-shadow: $shadow-elements
+            background-color: $lightElements
+            svg
+                color: $inputText
+        &__select
+            box-shadow: $shadow-elements
+    article
+        box-shadow: $shadow-elements
+        background-color: $lightElements
+    .country-detail
+        &__btn
+            box-shadow: $shadow-elements
+            background-color: $lightElements
+            color: $bodytext
+            svg
+                color: $bodytext
+    .borders
+        div ul li
+            box-shadow: $shadow-elements
+
+.dark-mode
+    .bg
+        background-color: $bodycolor-dark
+    header
+        background-color: $darkElements
+    .header
+        &__title, &__items
+            color: $bodytext-dark
+    .body
+        background-color: $bodycolor-dark
+    .filter
+        &__search
+            box-shadow: $shadow-elements-dark
+            background-color: $darkElements
+            input
+                background-color: $darkElements
+                color: $bodytext-dark
+            svg
+                color: $bodytext-dark
+        &__select
+            box-shadow: $shadow-elements-dark
+            background-color: $darkElements
+            color: $bodytext-dark
+    article
+        box-shadow: $shadow-elements-dark
+        background-color: $darkElements
+        h2
+            color: $bodytext-dark
+        ul li
+            color: $bodytext-dark
+    .card-info
+        h1
+            color: $bodytext-dark
+    .country-detail
+        &__btn
+            box-shadow: $shadow-elements-dark
+            background-color: $darkElements
+            color: $bodytext-dark
+            svg
+                color: $bodytext-dark
+        li
+            color: $bodytext-dark
+        .textsOne, .textsTwo
+            color: $bodytext-dark
+    .borders
+        color: $bodytext-dark
+        div ul li
+            box-shadow: $shadow-elements-dark
+            color: $bodytext-dark

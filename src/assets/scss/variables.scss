@@ -1,0 +1,23 @@
+$radius: 4px;
+$inputText: hsl(0, 0%, 52%);
+$width-desktop: 1440px;
+$homepageItems: 14px;
+$detailPage: 16px;
+$weightsLight: 300;
+$weightsRegular: 600;
+$weightsBold: 800;
+
+
+// Light theme
+$lightElements: hsl(0, 0%, 100%);
+$bodycolor: hsl(0, 0%, 98%);
+$bodytext: hsl(200, 15%, 8%);
+$shadow-elements: 1px 1px 5px 1px hsl(208deg 46% 92%);
+$shadow-topbar: 1px 1px 2px 1px hsl(0deg 0% 95%);
+
+// Dark theme
+
+$darkElements: hsl(209, 23%, 22%);
+$bodycolor-dark: hsl(207, 26%, 17%);
+$bodytext-dark: hsl(0, 0%, 100%);
+$shadow-elements-dark: 1px 1px 5px 1px hsl(205deg 27% 16%)

@@ -1,0 +1,9 @@
+<div class="container countries">
+  <div class="countries__filter">
+    <app-countries-filter (filter)="emitFilter( $event )"></app-countries-filter>
+  </div>
+
+  <div class="countries__list">
+    <app-country [country]="country" *ngFor="let country of countries |async"></app-country>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="container country-detail">
+  <button type="button" class="country-detail__btn" routerLink="/v2/countries">
+    <i class="fa-solid fa-arrow-left-long"></i>Back
+  </button>
+
+  <div *ngIf="countryDetail" class="country-detail__info">
+    <div class="img-container">
+      <img [src]="countryDetail.flag" [alt]="countryDetail.name" loading="lazy">
+    </div>
+
+    <div class="card-info">
+      <h1>{{countryDetail.nativeName}}</h1>
+      <div class="texts">
+        <ul class="textsOne">
+          <li>
+            <strong>Native Name: </strong>{{countryDetail.nativeName}}
+          </li>
+          <li>
+            <strong>Population: </strong>{{countryDetail.population}}
+          </li>
+          <li>
+            <strong>Region: </strong>{{countryDetail.region}}
+          </li>
+          <li>
+            <strong>Sub Region: </strong>{{countryDetail.subregion}}
+          </li>
+          <li>
+            <strong>Capital: </strong>{{countryDetail.capital}}
+          </li>
+        </ul>
+
+        <div class="textsTwo">
+          <strong>Top Level Domain: </strong>{{countryDetail.topLevelDomain}}
+          <div>
+            <strong>currencies:</strong>
+            <ul>
+              <li *ngFor="let currency of countryDetail.currencies">{{currency.name}}</li>
+            </ul>
+          </div>
+          <div>
+            <strong>Languages:</strong>
+            <ul>
+              <li *ngFor="let language of countryDetail.languages">{{language.name}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="borders">
+        <strong>Border countries:</strong>
+        <div>
+          <ul>
+            <li *ngFor="let border of countryDetail.borders">{{border}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
