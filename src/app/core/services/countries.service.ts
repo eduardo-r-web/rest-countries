@@ -73,7 +73,7 @@ export class CountriesService {
   }
 
   getCountriesByContinent( continent: string ){
-    return this.httpClient.get<SummaryCountry[]>(`${environment.URL_API}continent/${continent}`)
+    return this.httpClient.get<SummaryCountry[]>(`${environment.URL_API}continent/${continent.toLowerCase()}`)
       .pipe(
         map((countries) => {
           let newCountries: SummaryCountry[] = [];
